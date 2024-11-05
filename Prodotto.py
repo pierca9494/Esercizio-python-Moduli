@@ -8,6 +8,16 @@ class Prodotto:
     def calcola_profitto(self, prezzo_vendita, costo_produzione, quantita):
         return self.prezzo_vendita - self.costo_produzione
     
+class Abbligliamento(Prodotto):
+    def __init__(self, nome, costo_produzione, prezzo_vendita, tipo):
+        super().__init__(nome, costo_produzione, prezzo_vendita)
+        self.tipo = tipo
+        
+class Elettronica(Prodotto):
+    def __init__(self, nome, costo_produzione, prezzo_vendita, marca):
+        super().__init__(nome, costo_produzione, prezzo_vendita)
+        self.marca = marca
+    
     
 
 # Creazione di un prodotto
